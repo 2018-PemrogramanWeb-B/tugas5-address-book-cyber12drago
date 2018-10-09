@@ -4,7 +4,7 @@
         $name=$_POST['name'];
         $email=$_POST['email'];
         $phone=$_POST['phone'];
-        if($con->query("INSERT INTO address_book (Name,Email,Phone)
+        if($con->query("INSERT INTO my_db (Name,Email,Phone)
                         VALUES ('".$name."','".$email."','".$phone."')")==true) {
             echo "Data successfully added<br>";
         }
@@ -33,7 +33,7 @@
     /*Delete table start*/
     if(isset($_POST["dele"])) {
  //       $todel=$_POST('del');
-        if($con->query("DELETE FROM address_book WHERE No=".$_POST["dele"]."")==true) {
+        if($con->query("DELETE FROM my_db WHERE No=".$_POST["dele"]."")==true) {
             echo "Data successfully deleted<br>";
         }
     }
@@ -53,7 +53,7 @@
             else if($val==3) {
                 $kolom="Phone";
             }
-            if($con->query("UPDATE address_book
+            if($con->query("UPDATE my_db
                             SET ".$kolom." = '".$to."'
                             WHERE ".$kolom." = '".$from."'")==true) {
                 echo "Data $from->$to successfully updated<br>";
