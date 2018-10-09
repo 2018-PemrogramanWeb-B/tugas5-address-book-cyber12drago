@@ -5,8 +5,8 @@
 <body>
 	<?php
 	$server = "localhost";
-	$username = "refadi";
-	$password = "refadi123";
+	$username = "root";
+	$password = "";
 	$dbname = "myDB";
 	$con= new mysqli($server,$username,$password);
 	if($con->connect_error) {
