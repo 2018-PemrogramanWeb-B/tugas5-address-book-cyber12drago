@@ -12,7 +12,7 @@
     }
 
     if(isset($_POST["show"])) {
-        $sql="SELECT No, Name, Email, Phone FROM address_book";
+        $sql="SELECT No, Name, Email, Phone FROM my_db";
         $table=mysqli_query($con,$sql);
         if(mysqli_num_rows($table)>0) {
             echo "<table border='1'>
